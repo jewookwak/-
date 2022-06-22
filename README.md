@@ -9,7 +9,7 @@
 
   
 1. 매주 2~4 문제 풀이  
-2. 매주 수요일 코드 리뷰  
+2. 매주 목요일 코드 리뷰  
 3. Weekly Directory Name : WeekXX  
 ex) Week01, Week02  
 4. File Name : 문제번호_성씨  
