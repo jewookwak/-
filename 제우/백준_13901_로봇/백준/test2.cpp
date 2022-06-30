@@ -48,6 +48,8 @@ int main() //Input check
 	{
 		cout << move[i] << " ";
 	}
+	
+	cout << "commit test2" << endl;
 
 	
 }
