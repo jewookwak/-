@@ -30,6 +30,6 @@ int main()
 	{
 		cin >> move[i];
 	}
-	
+	// K-comment
 
 }
