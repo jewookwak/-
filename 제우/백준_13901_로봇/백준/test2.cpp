@@ -51,5 +51,6 @@ int main() //Input check
 	
 	cout << "commit test2" << endl;
 	cout << "commit test3" << endl;
+	cout << "commit test with different computer" << endl;
 	
 }
