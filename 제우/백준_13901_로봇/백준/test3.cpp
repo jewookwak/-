@@ -122,6 +122,6 @@ void right(int x, int y, int** obs_location) {
 }
 
 int max_order(int **A) {
-
+	//hello
 
 }
