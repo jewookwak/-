@@ -27,7 +27,7 @@ ex) Week01, Week02
 
 week01 : https://www.acmicpc.net/problem/13901  
 week02 : 1. https://github.com/jewookwak?tab=repositories  
-         2. https://www.acmicpc.net/problem/17829  
+2. https://www.acmicpc.net/problem/17829  
 </div>
 </details>
 
