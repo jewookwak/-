@@ -1,13 +1,15 @@
 #include <iostream>
 using namespace std;
 
-void up(); void down(); void left(); void right();
-
+int up(int x, int y, int** obs_location, int** map);
+int down(int x, int y, int** obs_location, int** map);
+int left(int x, int y, int** obs_location, int** map);
+int right(int x, int y, int** obs_location, int** map);
+int get_Max_Int(int arr[][2], int xy, int size); int get_Min_Int(int arr[][2], int xy, int size);
 int num_obstacle;
+int row, col;
 int main()
-{
-
-	int row, col;
+{	
 	cin >> row, cin >> col;
 	cin >> num_obstacle;
 
@@ -75,53 +77,125 @@ int main()
 		switch (move[i]) {
 
 		case 1: 
-			up(cur_x,cur_y, obstacle_location);
+			cur_y = up(cur_x,cur_y, obstacle_location,map);
 			break;
 		case 2:
-			down(cur_x, cur_y, obstacle_location);
+			cur_y = down(cur_x, cur_y, obstacle_location,map);
 			break;
 		case 3:
-			left(cur_x, cur_y, obstacle_location);
+			cur_x = left(cur_x, cur_y, obstacle_location,map);
 			break;
 		case 4:
-			right(cur_x, cur_y, obstacle_location);
+			cur_x =right(cur_x, cur_y, obstacle_location,map);
 			break;
 		}
 	}
 	
-
+	cout << "current location : " << cur_x << " " << cur_y << endl;
 
 	cout << "finish" << endl;
 	return 0;
 }
 
-void up(int x,int y, int** obs_location) {
+int up(int x,int y, int** obs_location, int **map) {
 	int temp_location[1000][2];
+	int max_index;
+	int axis = 1; // fixed axis  (x:0,y:1)
 	cout << "up" << endl;
 	for (int i = 0; i < num_obstacle; i++) {
 		if (obs_location[i][1] == y && obs_location[i][0] < x) {
 			for (int j = 0; j < 2; j++) {
-				temp_location[i][j] = obs_location[i][j];
-
+				temp_location[i][j] = obs_location[i][j];		
 			}
-			
+		}
+		
+	}
+	max_index = get_Max_Int(temp_location, axis,y+1);
+	for (int i = max_index; i < y; i++)
+	{
+		map[x][i] = -1;
+	}
+	return (max_index + 1); // => cur_y
+}
+
+int down(int x, int y, int** obs_location, int** map) {
+	int temp_location[1000][2];
+	int min_index;
+	int axis = 1; //fixed axis  (x:0,y:1)
+	cout << "down" << endl;
+	for (int i = 0; i < num_obstacle; i++) {
+		if (obs_location[i][1] == y && obs_location[i][0] > x) {
+			for (int j = 0; j < 2; j++) {
+				temp_location[i][j] = obs_location[i][j];
+			}
+		}
+
+	}
+	min_index = get_Min_Int(temp_location, axis, row-y-1);
+	for (int i = y; i < min_index; i++)
+	{
+		map[x][i] = -1;
+	}
+	return (min_index -1); // => cur_y
+}
+
+int left(int x, int y, int** obs_location, int** map) {
+	int temp_location[1000][2];
+	int max_index;
+	int axis = 0; // fixed axis  (x:0,y:1)
+	cout << "left" << endl;
+	for (int i = 0; i < num_obstacle; i++) {
+		if (obs_location[i][1] == x && obs_location[i][0] < y) {
+			for (int j = 0; j < 2; j++) {
+				temp_location[i][j] = obs_location[i][j];
+			}
+		}
+
+	}
+	max_index = get_Max_Int(temp_location, axis, x + 1);
+	for (int i = max_index; i < x; i++)
+	{
+		map[y][i] = -1;
+	}
+	return (max_index + 1); // => cur_x
+}
+int right(int x, int y, int** obs_location, int** map) {
+	int temp_location[1000][2];
+	int min_index;
+	int axis = 0; //fixed axis  (x:0,y:1)
+	cout << "right" << endl;
+	for (int i = 0; i < num_obstacle; i++) {
+		if (obs_location[i][1] == x && obs_location[i][0] > y) {
+			for (int j = 0; j < 2; j++) {
+				temp_location[i][j] = obs_location[i][j];
+			}
+		}
+
+	}
+	min_index = get_Min_Int(temp_location, axis, col-x-1);
+	for (int i = x; i < min_index; i++)
+	{
+		map[y][i] = -1;
+	}
+	return (min_index - 1); // => cur_x
+}
+
+int get_Max_Int(int arr[][2],int xy ,int size) {
+	int max = arr[0][xy];
+	for (int i = 0; i < size; i++) {
+		if (arr[i][xy] > max) {
+			max = arr[i][xy];
 		}
 	}
-
+	return max;
 }
 
-void down(int x, int y, int** obs_location) {
-	cout << "down" << endl;
-}
-
-void left(int x, int y, int** obs_location) {
-	cout << "left" << endl;
-}
-void right(int x, int y, int** obs_location) {
-	cout << "right" << endl;
-}
-
-int max_order(int **A) {
-	//hello
-
+int get_Min_Int(int arr[][2], int xy, int size) {
+	int min = arr[0][xy];
+	for (int i = 0; i < size; i++) {
+		if (arr[i][xy] < min) {
+			min = arr[i][xy];
+		}
+	}
+	return min;
 }
