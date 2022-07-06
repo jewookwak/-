@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 using namespace std;
-//ÄüÁ¤·Ä
+//QuickSort   
 int n, cnt, quick[10000001];
 
 void quickSort(int i, int j)
@@ -14,10 +14,10 @@ void quickSort(int i, int j)
 	while (left <= right)
 	{
 		while (quick[left] < pivot) left++;
-		while (quick[right] > pivot) right--;
+		while (quick[right] > pivot) right--; // use index first and then 
 		if (left <= right)
 		{
-			swap(quick[left], quick[right]);
+			swap(quick[left], quick[right]);  // swap the array 
 			left++; right--;
 		}
 	}
