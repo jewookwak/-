@@ -2,5 +2,6 @@
 
 int main()
 {
+	print("c");
 	return 0;
 }
