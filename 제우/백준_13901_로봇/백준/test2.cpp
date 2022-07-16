@@ -13,7 +13,7 @@ int main() //Input check
 		
 	int row, col, num_obstacle;
 	cin >> row, cin >> col;
-	cin >> num_obstacle;
+	cin >> num_obstacle; 
 	
 
 	int** obstacle_location;
