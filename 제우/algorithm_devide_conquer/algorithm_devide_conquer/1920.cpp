@@ -22,7 +22,7 @@ void main()
 
 	cout << arr2[0][0] << endl;
 	int arr3[100000];
-	arr3[0] = arr2[0];
-	arr3[1] = arr2[1];
-	arr3[2] = arr2[4];
+	arr3[0] = arr2[1][0];
+	arr3[1] = arr2[1][1];
+	arr3[2] = arr2[1][4];
 }
