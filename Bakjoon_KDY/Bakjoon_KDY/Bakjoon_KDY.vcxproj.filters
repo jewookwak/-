@@ -18,5 +18,11 @@
     <ClCompile Include="Bakjoon_KDY.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="divide_conquer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="findnum.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
