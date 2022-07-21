@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void main()
+int main()
 {
 	int num1, num2;
 	int arr1[100000];
@@ -15,13 +15,17 @@ void main()
 	cin >> num2;
 	for (int i = 0; i < num2; i++)
 	{
-		arr2[0][i] = i;
-		cin >> arr2[1][i];
+		arr2[i][0] = i;
+		cin >> arr2[i][1];
 	}
 
-	cout << arr2[0][0] << endl;
+
 	int arr3[100000];
-	arr3[0] = arr2[1][0];
+	arr3[0] = arr2[0][1];
 	arr3[1] = arr2[1][1];
-	arr3[2] = arr2[1][4];
+	arr3[2] = arr2[4][1];
+	cout << arr3[0] << endl;
+	cout << arr3[1] << endl;
+	cout << arr3[2] << endl;
+	return 0;
 }
