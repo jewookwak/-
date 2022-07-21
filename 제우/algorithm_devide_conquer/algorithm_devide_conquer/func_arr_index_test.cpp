@@ -1,15 +1,15 @@
 #include <iostream>
 using namespace std;
-int second_max_arr(int Array[][2]) 
+int second_max_arr(int Array[][2])  // 2X2 array's second largest number
 {
 	int second;
 	int temp;
 	int temp_arr[4];
 	for (int i = 0; i < 2; i++)
 		for (int j = 0; j < 2; j++)
-			temp_arr[2 * i + j] = Array[i][j];
+			temp_arr[2 * i + j] = Array[i][j];  //temp_arr is 1D vector
 
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 4; i++)  // this is sorting
 	{
 		for (int j = i; j < 4; j++)
 		{
@@ -22,7 +22,7 @@ int second_max_arr(int Array[][2])
 		}
 	}
 	
-	return temp_arr[2];
+	return temp_arr[2];  // temp_arr[3] is largest number.
 
 }
 
