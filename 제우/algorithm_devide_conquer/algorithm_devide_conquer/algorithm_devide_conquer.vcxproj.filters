@@ -30,7 +30,16 @@
     <ClCompile Include="1920.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="17829_pulling.cpp">
+    <ClCompile Include="func_arr_index_test.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="test_dynamic_allocation.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pooling.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pooling_danamic_allocation.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
