@@ -1,58 +1,41 @@
 #include<iostream>
-#include <vector>
+#include<algorithm>
+
 using namespace std;
 
-void quickSort(int* data, int start, int end) {
-    if (start >= end) return;
-    int pivot = start;  // 기준 값
-    int i = start + 1;
-    int j = end;
+int array1[100000], array2[100000];
 
-    while (i <= j) {
-        while (data[i] <=
-            data[pivot])  // 키 값보다 큰 값 만날때까지 오른쪽으로 이동
-            i++;
-        while (data[j] >= data[pivot] &&
-            j > start)  // 키 값보다 작은 값 만날 때까지 왼쪽으로 이동
-            j--;
-        if (i > j)  //현재 엇갈린 상태면 pivot 값 교체
-        {
-            int temp = data[j];
-            data[j] = data[pivot];
-            data[pivot] = temp;
-        }
-        else {
-            int temp = data[j];
-            data[j] = data[i];
-            data[i] = temp;
-        }
-        // 재귀 호출
-        quickSort(data, start, j - 1);
-        quickSort(data, j + 1, end);
+int findnum(int n, int len) {
+    int fst = 0, mid = 0 , last = len - 1;
+
+    while (fst <= last) {
+        int mid = (fst + last) / 2;
+        if (array1[mid] == n) return 1;
+        else if (n < array1[mid]) last = mid - 1;
+        else fst = mid + 1;
     }
+    return 0;
 }
 
 int main()
 {
+    cout << "입력해주세요" << endl;
     int n1;
     cin >> n1;
-    int array1[100000], array2[100000];
+    
 
     for (int i = 0; i < n1; i++)
         cin >> array1[i];
 
-    int n2;
+    sort(array1, array1 + n1);
+
+    int n2,val;
     cin >> n2;
 
-    for (int i = 0; i < n2; i++)
-        cin >> array2[i];
-
-
-    int data[7] = { 38,27,43,9,3,82,10 };
-    int len = 7;
-
-    quickSort(vec2, 0, len - 1);
-
-    for (int i = 0; i < len; i++) cout << data[i] << ' ';
+    for (int i = 0; i < n2; i++){
+        cin >> val;
+        cout << findnum(val, n2) << "\n";
+    }
 }
     
+
