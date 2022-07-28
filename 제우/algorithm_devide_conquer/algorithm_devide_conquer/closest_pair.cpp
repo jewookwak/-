@@ -44,7 +44,6 @@ int SearchAll(vector<Point>& v, int s, int e) {
 }
 
 
-
 int SearchPoint(vector<Point>& v, int start, int end) {
     int count = end - start + 1;
 
