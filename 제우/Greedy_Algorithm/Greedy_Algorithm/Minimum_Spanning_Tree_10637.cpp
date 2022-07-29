@@ -2,7 +2,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-// Minimum_Spanning_Tree
+// Minimum_Spanning_Tree 
 
 struct graph {
 	int a; // node1
