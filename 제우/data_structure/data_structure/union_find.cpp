@@ -36,3 +36,5 @@ int main()
     cout <<"root of 1,2,3,4 : " << n.find(1) << n.find(2) << n.find(3) << n.find(4) << ", root of 5,6,7,8 : " << n.find(5) << n.find(6) << n.find(7) << n.find(8) << endl;
     return 0;
 }
+
+
