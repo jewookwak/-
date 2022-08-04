@@ -20,7 +20,7 @@ struct NaiveDisjointSet {
         u = find(u); v = find(v);
         //이미 u와 v가 같은 트리인 경우를 걸러낸다
         if (u == v) return;
-        parent[u] = v;
+        parent[v] = u;
     }
 };
 
