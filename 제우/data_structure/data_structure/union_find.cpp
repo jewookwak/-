@@ -34,6 +34,12 @@ int main()
     n.merge(6, 7);
     n.merge(7, 8);
     cout <<"root of 1,2,3,4 : " << n.find(1) << n.find(2) << n.find(3) << n.find(4) << ", root of 5,6,7,8 : " << n.find(5) << n.find(6) << n.find(7) << n.find(8) << endl;
+
+    for (int i = 1; i < 9; i++)
+        cout << n.parent[i];
+    cout << endl;
+
+
     return 0;
 }
 
