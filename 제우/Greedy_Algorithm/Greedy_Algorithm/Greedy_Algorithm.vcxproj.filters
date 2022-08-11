@@ -21,10 +21,10 @@
     <ClCompile Include="Minimum_Spanning_Tree_10637.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Minimum_Spanning_Tree_1197.cpp">
+    <ClCompile Include="Minimum_Spanning_Tree%28Kruskal%29_1197.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="test1.cpp">
+    <ClCompile Include="Minimum_Spanning_Tree%28Prim%29_1197.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
