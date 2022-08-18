@@ -4,7 +4,7 @@
 	#include <functional>    // greater, less
 	#define P pair<int, int>
 	using namespace std;
-	/*
+	/* 
 	By using MST_prim algorithm in a reverse way(put greater cost of passing road on top of queue)
 	*/
 	int visited[100001];
