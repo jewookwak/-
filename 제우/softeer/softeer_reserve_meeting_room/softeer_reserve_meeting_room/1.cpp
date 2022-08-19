@@ -8,11 +8,13 @@ vector<pair<string, pair<int, int>>> v;
 string arr_n[50];
 
 
+void compare()
+{
 
+}
 void Scadule(int n, int m) {
-
-	priority_queue<P, vector<P>, greater<P>>* pq = new priority_queue<P, vector<P>, greater<P>>;
-	int num_a;
+	int nine=9, eighteen=18;
+	priority_queue<P, vector<P>, greater<P>>* pq = new priority_queue<P, vector<P>, greater<P>>[n];
 
 	for (int i = 0; i < n; i++)
 	{
@@ -24,8 +26,50 @@ void Scadule(int n, int m) {
 			}
 
 		}
+		
 	}
-	delete pq;
+	/*
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr_n[i] << " : " << endl;
+		while (!pq[i].empty()) 
+		{
+			P cur = pq[i].top();
+			pq[i].pop();
+
+			cout << cur.first << ", " << cur.second << endl;
+		}
+	}
+	*/
+
+	cout << "Room " << arr_n[0] << ":" << endl;
+	int temp_list[18];
+	int count_available = 0;
+	int temp_prenum;
+	if (pq[0].empty())
+	{
+		cout << "----" << endl;
+		cout << "1 available:" << endl;
+		cout << "09-18" << endl;
+	}
+	else
+	{
+		if (nine != pq[0].top().first)
+		{
+			count_available++;
+			temp_list[0] = nine;
+			temp_list[1] = pq[0].top().first;
+			temp_prenum = pq[0].top().second;
+			pq[0].pop();
+		}
+		if (temp_prenum != pq[0].top().first)
+		{
+			temp_list[2] = temp_prenum;
+
+		}
+	}
+
+	delete[] pq;
 }
 
 
@@ -42,12 +86,13 @@ int main()
 		cin >> name >> start >> end;
 		v.push_back({ name,{start,end} });
 	}
-
+	/*
 	for (int i = 0; i < M; i++)
 	{
 		cout << v[i].first << " " << v[i].second.first << " " << v[i].second.second << endl;
 
 	}
-	//Scadule(N,M);
+	*/
+	Scadule(N,M);
 	return 0; 
 }
