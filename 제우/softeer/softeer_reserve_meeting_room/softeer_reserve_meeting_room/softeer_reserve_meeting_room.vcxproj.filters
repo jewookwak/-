@@ -15,19 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Coin_Change_11047.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Minimum_Spanning_Tree_10637.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Minimum_Spanning_Tree%28Kruskal%29_1197.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Minimum_Spanning_Tree%28Prim%29_1197.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="spaning_tree_1939.cpp">
+    <ClCompile Include="1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
