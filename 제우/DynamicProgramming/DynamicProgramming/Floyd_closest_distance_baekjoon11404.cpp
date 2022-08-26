@@ -10,12 +10,12 @@ void calculate(int n, int m)
 		for (int j = 0; j < n; j++)
 		{
 			if(arr[i][j] == 0 )
-				arr[i][j] = 1000000;
+				arr[i][j] = 987654321;
 			if (i == j)
 				arr[i][j] = 0;
-			cout << arr[i][j] << " ";
+			//cout << arr[i][j] << " ";
 		}
-		cout << endl;
+		//cout << endl;
 	}
 	for (int k = 0; k < n; k++)
 	{
@@ -27,12 +27,12 @@ void calculate(int n, int m)
 			}
 		}
 	}	
-	cout << endl << endl;
+	//cout << endl << endl;
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
 		{
-			if (arr[i][j] == 1000000)
+			if (arr[i][j] == 987654321)
 				arr[i][j] = 0;
 
 			cout << arr[i][j] << " ";
@@ -58,10 +58,10 @@ int main()
 
 	}
 	sort(v.begin(), v.end());
-	cout << endl << endl;
+	//cout << endl << endl;
 
-	for (int i = 0; i < m; i++)
-		cout << v[i].first.first << " " << v[i].first.second << " " << v[i].second << endl;
+	//for (int i = 0; i < m; i++)
+	//	cout << v[i].first.first << " " << v[i].first.second << " " << v[i].second << endl;
 	for (int i = m - 1; i >= 0; i--)
 		arr[v[i].first.first-1][v[i].first.second-1] = v[i].second;
 	
