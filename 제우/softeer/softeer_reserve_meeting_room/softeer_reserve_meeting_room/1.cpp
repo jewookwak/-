@@ -7,11 +7,6 @@ using namespace std;
 vector<pair<string, pair<int, int>>> v;
 string arr_n[50];
 
-
-void compare()
-{
-
-}
 void Scadule(int n, int m) {
 	int nine=9, eighteen=18;
 	priority_queue<P, vector<P>, greater<P>>* pq = new priority_queue<P, vector<P>, greater<P>>[n];
